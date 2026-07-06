@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Courses</title></head>
+<body>
+  <h1>Courses</h1>
+  <a href="/admin/courses/new">+ Add New Course</a>
+  <table border="1" cellpadding="8">
+    <tr><th>Title</th><th>Dates</th><th>Director</th><th>Lab</th></tr>
+    <% courses.forEach(c => { %>
+      <tr>
+        <td><%= c.title %></td>
+        <td><%= c.start_date %> to <%= c.end_date %></td>
+        <td><%= c.course_director %></td>
+        <td><%= c.lab_name %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <br>
+  <a href="/admin/dashboard">Back to dashboard</a>
+</body>
+</html>

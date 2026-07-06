@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Lab</title></head>
+<body>
+  <h1>Add New Lab</h1>
+  <form method="POST" action="/admin/labs/new">
+    <label>Lab Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Address:</label><br>
+    <textarea name="address" required></textarea><br><br>
+
+    <label>Director's Name:</label><br>
+    <input type="text" name="director" required><br><br>
+
+    <label>Director's Designation:</label><br>
+    <input type="text" name="designation" required><br><br>
+
+    <button type="submit">Add Lab</button>
+  </form>
+</body>
+</html>

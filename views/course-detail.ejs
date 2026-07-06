@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= course.title %></title>
+</head>
+<body>
+  <a href="/">&larr; Back to all courses</a>
+
+  <h1><%= course.title %></h1>
+  <p><strong>Start Date:</strong> <%= course.start_date %></p>
+  <p><strong>End Date:</strong> <%= course.end_date %></p>
+  <p><strong>Course Director:</strong> <%= course.course_director %></p>
+  <p><strong>Director's Designation:</strong> <%= course.director_designation %></p>
+
+  <h3>Organizing Lab</h3>
+  <p><strong>Lab:</strong> <%= course.lab_name %></p>
+  <p><strong>Address:</strong> <%= course.lab_address %></p>
+  <p><strong>Director:</strong> <%= course.lab_director %></p>
+  <p><strong>Designation:</strong> <%= course.lab_designation %></p>
+</body>
+</html>
+<a href="/course/<%= course.id %>/apply">Apply for this course</a>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DRDO Course Portal</title>
+</head>
+<body>
+  <h1>Available Courses</h1>
+
+  <% courses.forEach(course => { %>
+    <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+       <h3><%= course.title %></h3>
+       <p><%= course.start_date %> to <%= course.end_date %></p>
+       <p>Course Director: <%= course.course_director %></p>
+       <p>Organizing Lab: <%= course.lab_name %></p>
+       <a href="/course/<%= course.id %>">View details</a>
+    </div>
+  <% }) %>
+</body>
+</html>

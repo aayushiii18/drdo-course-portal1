@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apply - <%= course.title %></title>
+</head>
+<body>
+  <a href="/course/<%= course.id %>">&larr; Back to course</a>
+  <h1>Apply: <%= course.title %></h1>
+
+  <form method="POST" action="/course/<%= course.id %>/apply">
+    <label>Full Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Lab Assigned:</label><br>
+    <input type="text" name="lab_assigned" required><br><br>
+
+    <label>Lab Address:</label><br>
+    <textarea name="lab_address" required></textarea><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob" required><br><br>
+
+    <label>Accommodation Requirement:</label><br>
+    <textarea name="accommodation" required></textarea><br><br>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Labs</title></head>
+<body>
+  <h1>Labs</h1>
+  <a href="/admin/labs/new">+ Add New Lab</a>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Name</th><th>Address</th><th>Director</th><th>Designation</th>
+    </tr>
+    <% labs.forEach(lab => { %>
+      <tr>
+        <td><%= lab.name %></td>
+        <td><%= lab.address %></td>
+        <td><%= lab.director %></td>
+        <td><%= lab.designation %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <br>
+  <a href="/admin/dashboard">Back to dashboard</a>
+</body>
+</html>

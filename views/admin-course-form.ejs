@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Course</title></head>
+<body>
+  <h1>Add New Course</h1>
+  <form method="POST" action="/admin/courses/new">
+    <label>Title:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Start Date:</label><br>
+    <input type="date" name="start_date" required><br><br>
+
+    <label>End Date:</label><br>
+    <input type="date" name="end_date" required><br><br>
+
+    <label>Course Director:</label><br>
+    <input type="text" name="course_director" required><br><br>
+
+    <label>Director's Designation:</label><br>
+    <input type="text" name="director_designation" required><br><br>
+
+    <label>Organizing Lab:</label><br>
+    <select name="lab_id" required>
+      <% labs.forEach(lab => { %>
+        <option value="<%= lab.id %>"><%= lab.name %></option>
+      <% }) %>
+    </select><br><br>
+
+    <button type="submit">Add Course</button>
+  </form>
+</body>
+</html>
