@@ -98,12 +98,7 @@ app.post('/admin/login', (req, res) => {
   req.session.adminId = admin.id; // mark this session as logged in
   res.redirect('/admin/dashboard');
 });
-app.get('/admin/dashboard', (req, res) => {
-  if (!req.session.adminId) {
-    return res.redirect('/admin/login');
-  }
-  res.send('<h1>Welcome to the admin dashboard!</h1>');
-});
+
  
   app.get('/admin/dashboard', requireLogin, (req, res) => {
   const courseCount = db.prepare('SELECT COUNT(*) AS count FROM courses').get().count;
