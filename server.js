@@ -1,5 +1,7 @@
 const express = require('express');
-const db = require('./db/database'); // import our database connection
+const db = require('./db/database'); 
+require('./db/create-admin');
+require('./db/seed');
 const app = express();
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
