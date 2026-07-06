@@ -106,7 +106,11 @@ app.get('/admin/dashboard', (req, res) => {
 });
  
   app.get('/admin/dashboard', requireLogin, (req, res) => {
-  res.send('<h1>Welcome to the admin dashboard!</h1>');
+  const courseCount = db.prepare('SELECT COUNT(*) AS count FROM courses').get().count;
+  const labCount = db.prepare('SELECT COUNT(*) AS count FROM labs').get().count;
+  const applicationCount = db.prepare('SELECT COUNT(*) AS count FROM applications').get().count;
+
+  res.render('admin-dashboard', { courseCount, labCount, applicationCount });
 });
 
 app.get('/admin/labs/new', requireLogin, (req, res) => {
